@@ -21,13 +21,14 @@ from olx_monitor.sources.olx import (
     OlxClient,
     OlxSourceError,
     RobotsDenied,
+    RobotsUnavailable,
     card_fingerprint,
     city_matches,
     details_fingerprint,
     within_price,
 )
 
-_NON_RETRYABLE = (RobotsDenied, AccessRestricted, ListingUnavailable, MarkupChanged)
+_NON_RETRYABLE = (RobotsDenied, RobotsUnavailable, AccessRestricted, ListingUnavailable, MarkupChanged)
 
 
 async def _retry[T](action: Callable[[], Awaitable[T]], attempts: int) -> T:
