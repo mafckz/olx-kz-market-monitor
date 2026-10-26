@@ -1,0 +1,29 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+config.local.json
+settings.json
+*.secret
+*.log
+
+# Python runtime artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local monitor data
+.tmp/
+*.db
+*.sqlite
+*.sqlite3
+reports/
+data/
+logs/

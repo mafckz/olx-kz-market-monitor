@@ -1,0 +1,3 @@
+# Represent monitored targets as configurable search profiles
+
+The project starts by tracking used desktop PCs with an exact NVIDIA GeForce RTX 3080 in Almaty, but it must later search for other GPU models and unrelated products. We store each target as an independent profile with its own category, target terms or model, include/exclude rules, price range, geography, and analysis mode. Profiles can run concurrently; a Kazakhstan-wide search is a one-off command and does not mutate a saved profile. This keeps product criteria out of shared monitor logic while allowing category-specific matching rules.
