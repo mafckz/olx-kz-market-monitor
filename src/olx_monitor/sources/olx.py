@@ -36,6 +36,10 @@ class RobotsDenied(OlxSourceError):
     pass
 
 
+class RobotsUnavailable(OlxSourceError):
+    """Правила OLX не удалось получить; ответ не следует запрашивать повторно автоматически."""
+
+
 class AccessRestricted(OlxSourceError):
     pass
 
@@ -266,9 +270,16 @@ class OlxClient:
     async def _load_robots(self) -> None:
         if self.robot_parser is not None:
             return
-        response = await self.client.get(ROBOTS_URL)
+        try:
+            response = await self.client.get(ROBOTS_URL)
+        except httpx.TimeoutException as exc:
+            raise OlxSourceError("Таймаут при запросе robots.txt OLX") from exc
+        except httpx.HTTPError as exc:
+            raise OlxSourceError(f"Сетевая ошибка при запросе robots.txt OLX: {exc}") from exc
+        if response.status_code >= 500:
+            raise OlxSourceError(f"OLX временно недоступен при проверке robots.txt: HTTP {response.status_code}.")
         if response.status_code != 200:
-            raise OlxSourceError(f"Не удалось проверить robots.txt OLX: HTTP {response.status_code}.")
+            raise RobotsUnavailable(f"Не удалось проверить robots.txt OLX: HTTP {response.status_code}.")
         parser = urllib.robotparser.RobotFileParser()
         parser.set_url(ROBOTS_URL)
         parser.parse(response.text.splitlines())
