@@ -21,7 +21,7 @@ git pull --ff-only origin main
 
 Прежняя проектная активность завершилась штатно, затем Codex перезапустился. При попытках продолжить старую сессию API отклонил `commandcode/deepseek-deepseek-v4.1-flash` как неподдерживаемую модель, а последующие запросы завершились ошибкой `Invalid 'input[112].content'`. Состояние проекта сохранено в репозитории. Работай в новой сессии на `gpt-6-luna`; не выбирай неподдерживаемый model ID `commandcode/deepseek-deepseek-v4.1-flash` в Codex.
 
-Проверь рабочее дерево до изменений. Пароли, одноразовые коды, cookies и API-токены не передавай через чат. Если владелец уже добавил тебя в приватный репозиторий, сверь публичный снимок с [основным репозиторием](https://github.com/grromankz-ctrl/olx-kz-market-monitor); иначе продолжай в своём форке или ветке и создай pull request.
+Проверь рабочее дерево до изменений. Для настройки GitHub доступа следуй [инструкции](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/github-access-setup.md). Пароли, одноразовые коды, cookies и API-токены не передавай через чат. Если владелец уже добавил тебя в приватный репозиторий, сверь публичный снимок с [основным репозиторием](https://github.com/grromankz-ctrl/olx-kz-market-monitor); иначе продолжай в своём форке или ветке и создай pull request.
 
 ### Сначала прочитай
 
@@ -31,6 +31,7 @@ git pull --ff-only origin main
 - [docs/project-status.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/project-status.md)
 - [docs/task-workflow.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/task-workflow.md)
 - [docs/tasks.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/tasks.md)
+- [docs/github-access-setup.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/github-access-setup.md)
 - [docs/requirements.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/requirements.md)
 - [docs/implementation-plan.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/implementation-plan.md)
 - [GLOSSARY.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/GLOSSARY.md)
