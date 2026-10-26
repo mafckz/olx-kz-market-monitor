@@ -2,7 +2,7 @@
 
 Обновлено: 26 октября 2026 г.
 
-Основной приватный репозиторий: [grromankz-ctrl/olx-kz-market-monitor](https://github.com/grromankz-ctrl/olx-kz-market-monitor). Публичный снимок для передачи другим агентам: [mafckz/olx-kz-market-monitor](https://github.com/mafckz/olx-kz-market-monitor).
+Основной приватный репозиторий: [grromankz-ctrl/olx-kz-market-monitor](https://github.com/grromankz-ctrl/olx-kz-market-monitor). Публичный снимок для передачи другим агентам: [mafckz/olx-kz-market-monitor](https://github.com/mafckz/olx-kz-market-monitor), опубликован 26.10.2026. Анонимный доступ к репозиторию и `README.md` проверен HTTP 200.
 
 ## Что реализовано
 
@@ -34,7 +34,7 @@
 | Windows Scheduled Task | Код установки есть; фактическая работа не подтверждена |
 | AI-анализ | Опциональный код есть; ключ и рабочий вызов не предоставлены |
 
-PR [#1](https://github.com/grromankz-ctrl/olx-kz-market-monitor/pull/1) по безопасной остановке повторов после отказа `robots.txt` прошёл внутреннее независимое ревью, но остаётся открытым. GitHub показывал конфликт с изменившимся `main` и отсутствие CI-проверок. Автоматизированное слияние не выполнялось и не подтверждено.
+Приватный PR [#1](https://github.com/grromankz-ctrl/olx-kz-market-monitor/pull/1) по безопасной остановке повторов после отказа `robots.txt` прошёл внутреннее независимое ревью, но остаётся открытым. GitHub показывал конфликт с изменившимся `main` и отсутствие CI-проверок. Автоматизированное слияние не выполнялось и не подтверждено. В публичном снимке те же изменения сохранены отдельной веткой и черновым [PR #1](https://github.com/mafckz/olx-kz-market-monitor/pull/1); они не входят в публичный `main`.
 
 ## Следующие шаги
 

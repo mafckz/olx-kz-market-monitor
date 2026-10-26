@@ -2,7 +2,7 @@
 
 Обновлено: 26 октября 2026 г.
 
-Основной приватный репозиторий: [grromankz-ctrl/olx-kz-market-monitor](https://github.com/grromankz-ctrl/olx-kz-market-monitor). Публичное зеркало для другой машины: [mafckz/olx-kz-market-monitor](https://github.com/mafckz/olx-kz-market-monitor). Актуальный статус: [docs/project-status.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/project-status.md).
+Основной приватный репозиторий: [grromankz-ctrl/olx-kz-market-monitor](https://github.com/grromankz-ctrl/olx-kz-market-monitor). Публичный снимок для другой машины: [mafckz/olx-kz-market-monitor](https://github.com/mafckz/olx-kz-market-monitor), доступ анонимно проверен 26.10.2026. Актуальный статус: [docs/project-status.md](https://github.com/mafckz/olx-kz-market-monitor/blob/main/docs/project-status.md).
 
 Скопируй раздел «Промпт следующему агенту» целиком в новую среду.
 
@@ -44,7 +44,7 @@ git pull --ff-only origin main
 ### Подтверждённое состояние
 
 - **OLX-001 — In progress.** Нужен разовый поиск подержанных настольных ПК в Алматы с точной RTX 3080 за 200 000–500 000 ₸ включительно, без Ti, ноутбуков и отдельных видеокарт. 25.10.2026 `once` завершился кодом 1 после HTTP 403 на `robots.txt`; категория не запрашивалась, live-результатов нет.
-- **OLX-003 — In progress.** PR [#1](https://github.com/grromankz-ctrl/olx-kz-market-monitor/pull/1) прекращает повторы `robots.txt` при 3xx/4xx, сохраняя ограниченные повторы для временных 5xx/timeout/network errors. Изменение прошло внутреннее независимое ревью, но PR открыт и не объединён. 26.10.2026 GitHub показывал расхождение с `main`, `mergeable=false` и отсутствие CI-проверок. Перепроверь актуальное состояние.
+- **OLX-003 — In progress.** Приватный PR [#1](https://github.com/grromankz-ctrl/olx-kz-market-monitor/pull/1) и его публичный черновик [#1](https://github.com/mafckz/olx-kz-market-monitor/pull/1) прекращают повторы `robots.txt` при 3xx/4xx, сохраняя ограниченные повторы для временных 5xx/timeout/network errors. Изменение прошло внутреннее независимое ревью, но оба PR открыты, не объединены и не встроены в `main`. 26.10.2026 приватный GitHub показывал расхождение с `main`, `mergeable=false` и отсутствие CI-проверок. Перепроверь актуальное состояние.
 - **OLX-004 — In progress.** Отдельный поиск видеокарты RTX 3080 в Алматы. 26.10.2026 встроенный браузер получил `net::ERR_BLOCKED_BY_CLIENT`, прямой одноразовый терминальный запрос — HTTP 403 на `robots.txt`; категория не запрашивалась. Web-индекс дал только частичную подборку: рабочие 10/12-гигабайтные RTX 3080 примерно за 150 000–230 000 ₸, неисправная около 70 000 ₸, готовые ПК за 340 000–650 000 ₸. Не считать это полным списком или живой OLX-выдачей.
 - **OLX-002 — Planned.** Повторяющийся сбор и локальная история в коде есть; реальный периодический запуск не подтверждён.
 - **BOT-001 — Paused.** Telegram отложен пользователем; не повторяй pairing и привязку без нового прямого запроса.
@@ -79,4 +79,4 @@ git pull --ff-only origin main
 - [src/olx_monitor/bot.py](https://github.com/mafckz/olx-kz-market-monitor/blob/main/src/olx_monitor/bot.py)
 - [src/olx_monitor/ai.py](https://github.com/mafckz/olx-kz-market-monitor/blob/main/src/olx_monitor/ai.py)
 - [src/olx_monitor/cli.py](https://github.com/mafckz/olx-kz-market-monitor/blob/main/src/olx_monitor/cli.py)
-- [tests/test_robots_retry_policy.py](https://github.com/mafckz/olx-kz-market-monitor/blob/main/tests/test_robots_retry_policy.py)
+- [tests/test_robots_retry_policy.py в ветке исправления](https://github.com/mafckz/olx-kz-market-monitor/blob/fix/olx-003-robots-denial-no-retry/tests/test_robots_retry_policy.py)
